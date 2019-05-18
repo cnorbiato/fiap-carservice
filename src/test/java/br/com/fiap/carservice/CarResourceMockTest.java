@@ -11,6 +11,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
+
 @RunWith(MockitoJUnitRunner.class)
 public class CarResourceMockTest {
 
@@ -19,9 +20,10 @@ public class CarResourceMockTest {
 
     @Test
     public void shouldFindCarByColor(){
-        //Stubs
-        String color = "Vermeio";
-        String model = "Corsa";
+
+        //stubs
+        String color = "preto";
+        String model = "camaro";
 
         Car car = new Car();
         car.setColor(color);
@@ -35,7 +37,6 @@ public class CarResourceMockTest {
         //Execute
         List<Car> carsResponse = carResource.findCarByColor(color);
 
-        //Assert
         assertEquals(carsResponse.get(0).getColor(), color);
         assertEquals(carsResponse.get(0).getModel(), model);
 

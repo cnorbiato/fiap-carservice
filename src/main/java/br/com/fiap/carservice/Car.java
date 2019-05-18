@@ -8,29 +8,26 @@ import javax.persistence.Id;
 @Entity
 public class Car {
 
-    //Pode trabalhar com Uuid para gerar Id sequencial para a entidade
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id;
+    private int id;
 
-    private String Color;
-
-    private String Model;
-
+    private String color;
+    private String model;
+#teste git
     public String getColor() {
-        return Color;
+        return color;
     }
 
     public void setColor(String color) {
-        Color = color;
+        this.color = color;
     }
 
     public String getModel() {
-        return Model;
+        return model;
     }
 
     public void setModel(String model) {
-        Model = model;
+        this.model = model;
     }
 }
